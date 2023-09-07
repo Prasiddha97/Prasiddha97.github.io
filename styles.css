@@ -3,6 +3,13 @@ body {
   font-family: 'Courier', sans-serif;
 }
 
+
+.intro p {
+  text-align: justify;
+}
+
+
+
 .header {
   display: flex;
   justify-content: flex-end;

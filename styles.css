@@ -39,6 +39,7 @@ body {
 #profile-pic {
   max-width: 300px;
   max-height: 300px;
+  margin-top: 4em;
   margin-right: 2em; /* Add some margin for tighter wrapping */
   flex-shrink: 0;    /* Prevents the image from shrinking */
 }

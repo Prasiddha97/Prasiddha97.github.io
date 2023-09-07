@@ -33,22 +33,18 @@ body {
   flex-wrap: wrap;
 }
 
-.intro-container {
-  flex: 1;
-}
-
 #profile-pic {
   max-width: 200px;
   max-height: 300px;
-  width: auto;
-  height: auto;
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .intro {
-  flex-grow: 1;
+  flex: 3;
   padding-left: 20px;
+  text-align: justify;
 }
+
 
 .highlight {
   color: black;

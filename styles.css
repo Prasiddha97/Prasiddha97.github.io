@@ -31,6 +31,11 @@ body {
   align-items: flex-start; /* Align items at the start of cross axis */
 }
 
+.scholar {
+  /* Add your custom styles here. For instance: */
+  margin-left: 20px; /* adds space between the CV and Google Scholar links */
+}
+
 /* Profile picture settings */
 #profile-pic {
   width: 400px;

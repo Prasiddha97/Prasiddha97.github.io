@@ -23,10 +23,17 @@ body {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.intro-container {
+  flex: 1;
 }
 
 #profile-pic {
   max-width: 200px;
+  max-height: 300px;
+  width: auto;
   height: auto;
   flex-shrink: 0;
 }

@@ -1,6 +1,6 @@
 body {
   background-color: #f3f3f3;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Courier', sans-serif;
 }
 
 .header {
@@ -13,7 +13,7 @@ body {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  text-align: center;
+  text-align: right;
 }
 
 .container {

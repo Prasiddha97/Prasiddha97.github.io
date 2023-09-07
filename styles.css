@@ -33,15 +33,14 @@ body {
 
 /* Profile picture settings */
 #profile-pic {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin-right: 1em;
 }
 
 /* Introduction text settings */
 .intro {
   flex-grow: 1;  /* Allows this element to take up remaining space */
-  margin-top: 2em;
   text-align: justify;
 }
 

@@ -32,7 +32,7 @@ body {
 .content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 6em;  /* Add space at the top */
+  margin-top: 1em;  /* Add space at the top */
 }
 
 /* Style for your profile picture */

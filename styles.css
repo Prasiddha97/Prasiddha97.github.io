@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: flex-end;
   background-color: #333;
-  margin-top: 4em; /* Added for the 4 blank spaces */
+  margin-top: 4em; /* Spacing from the top */
 }
 
 .header a {
@@ -25,29 +25,25 @@ body {
   flex-direction: column;
 }
 
-/* Content area settings */
+/* Content settings */
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  /* This makes the elements within to align horizontally */
+  align-items: flex-start; /* Align items at the start of cross axis */
 }
 
-/* Individual section styling */
-.image-section, .text-section {
-  display: inline-block;
-}
-
-/* Profile picture styling */
+/* Profile picture settings */
 #profile-pic {
   width: 200px;
-  height: 300px;
+  height: 200px;
   margin-top: 2em;
-  margin-right: 1em; /* Added margin to separate the image from text */
+  margin-right: 1em;
 }
 
-/* Text introduction styling */
-.text-section .intro {
-  flex-grow: 1;
-  text-align: justify; /* Paragraphs are justified */
+/* Introduction text settings */
+.intro {
+  flex-grow: 1;  /* Allows this element to take up remaining space */
+  margin-top: 2em;
+  text-align: justify;
 }
 
 /* Name highlighting */

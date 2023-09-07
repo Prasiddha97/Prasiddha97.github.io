@@ -13,22 +13,29 @@ body {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
 }
 
 #profile-pic {
-  max-width: 200px;  /* You can adjust this value */
+  max-width: 200px;
   height: auto;
+  flex-shrink: 0;
 }
 
 .intro {
+  flex-grow: 1;
   padding-left: 20px;
 }
 
 .highlight {
-  color: red;
+  color: black;
 }

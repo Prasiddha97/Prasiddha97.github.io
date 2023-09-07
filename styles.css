@@ -28,20 +28,24 @@ body {
   flex-direction: column;
 }
 
+/* Add space at the top for content */
 .content {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 4em;  /* Add space at the top */
 }
 
+/* Style for your profile picture */
 #profile-pic {
   max-width: 200px;
   max-height: 300px;
-  flex: 1;
+  margin-right: 1em; /* Add some margin for tighter wrapping */
+  flex-shrink: 0;    /* Prevents the image from shrinking */
 }
 
+/* Styles for your introduction text */
 .intro {
-  flex: 3;
-  padding-left: 20px;
+  flex-grow: 1;
   text-align: justify;
 }
 

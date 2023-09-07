@@ -38,7 +38,7 @@ body {
 
 /* Profile picture styling */
 #profile-pic {
-  width: 300px;
+  width: 200px;
   height: 300px;
   margin-top: 2em;
   margin-right: 1em; /* Added margin to separate the image from text */
@@ -47,7 +47,6 @@ body {
 /* Text introduction styling */
 .text-section .intro {
   flex-grow: 1;
-  margin-top: 2em;
   text-align: justify; /* Paragraphs are justified */
 }
 

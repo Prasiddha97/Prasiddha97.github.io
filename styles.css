@@ -29,6 +29,7 @@ body {
 .content {
   display: flex;  /* This makes the elements within to align horizontally */
   align-items: flex-start; /* Align items at the start of cross axis */
+  margin-top: 2 em;
 }
 
 .scholar {

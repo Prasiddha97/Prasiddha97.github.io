@@ -53,10 +53,10 @@
       padding: 20px;
     }
     /* Grid layout for the papers */
-    .paper-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+   .paper-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* This makes sure there is only one column */
+    gap: 20px; /* Space between each paper */
     }
     .paper {
       border: 1px solid #ddd;

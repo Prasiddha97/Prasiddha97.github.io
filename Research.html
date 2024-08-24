@@ -32,31 +32,14 @@
       color: #7f8c8d;
       margin-bottom: 20px;
     }
-    .policy-title {
-      font-size: 2em;
-      font-weight: bold;
-      color: #8e44ad;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-    .policy-paper {
-      margin-bottom: 10px;
-    }
-    .policy-paper a {
-      color: #8e44ad;
-      text-decoration: none;
-    }
-    .policy-paper a:hover {
-      text-decoration: underline;
-    }
     .content {
       padding: 20px;
     }
-    /* Grid layout for the papers */
-   .paper-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* This makes sure there is only one column */
-    gap: 20px; /* Space between each paper */
+    /* Layout for the papers */
+    .paper-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 20px; /* Space between each paper */
     }
     .paper {
       border: 1px solid #ddd;
@@ -75,9 +58,11 @@
       <a href="Personal.html" >Personal</a>
     </div>
     <div class="content">
-      <div class="section-title">Working Papers. Please email me for drafts! </div>
+
+      <!-- Working Papers Section -->
+      <div class="section-title">Working Papers. Please email me for working drafts!</div>
       
-      <!-- Wrapper for grid layout -->
+      <!-- Wrapper for Working Papers grid layout -->
       <div class="paper-grid">
         <div class="paper">
           <div class="paper-title">What Happens When We Pay Our Teachers More? Evidence from New Jersey Public Schools</div>
@@ -100,21 +85,32 @@
           </div>
         </div>
       </div>
-     
-      <div class="policy-title">Policy Relevant Work</div>
-      <div class="policy-paper">
-        <a href="https://api.mountainscholar.org/server/api/core/bitstreams/7934c169-fe28-4a7a-942b-a9db6ddecf04/content" target="_blank">
-          Shakya, Prasiddha, and George P. Gonpu. "Impact of remittances on economic growth in Nepal." Nepal Public Policy Review  (2021): 31-47.
-        </a>
-      </div>
-      <div class="policy-paper">
-        <a href="https://mountainscholar.org/handle/10217/233490" target="_blank">
-          Ellis, Elizabeth, Parker Arnold, Prasiddha Shakya, Juliet Lee, Emilia Ravetta, Ted Toombs, Anne Mook, and Jeni Cross. "Agricultural conservation networks in Iowa." Colorado State University. Libraries.
-        </a>
+
+      <!-- Policy Relevant Work Section -->
+      <div class="section-title">Policy Relevant Work</div>
+      
+      <!-- Wrapper for Policy Relevant Papers grid layout -->
+      <div class="paper-grid">
+        <div class="paper">
+          <div class="paper-title">Impact of remittances on economic growth in Nepal</div>
+          <div class="abstract">
+            <a href="https://api.mountainscholar.org/server/api/core/bitstreams/7934c169-fe28-4a7a-942b-a9db6ddecf04/content" target="_blank">
+              Shakya, Prasiddha, and George P. Gonpu. "Impact of remittances on economic growth in Nepal." Nepal Public Policy Review (2021): 31-47.
+            </a>
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">Agricultural conservation networks in Iowa</div>
+          <div class="abstract">
+            <a href="https://mountainscholar.org/handle/10217/233490" target="_blank">
+              Ellis, Elizabeth, Parker Arnold, Prasiddha Shakya, Juliet Lee, Emilia Ravetta, Ted Toombs, Anne Mook, and Jeni Cross. "Agricultural conservation networks in Iowa." Colorado State University. Libraries.
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </body>
 </html>
-

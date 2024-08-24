@@ -52,9 +52,17 @@
     .content {
       padding: 20px;
     }
-    .paper {
+    /* Grid layout for the papers */
+    .paper-grid {
       display: grid;
-  
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .paper {
+      border: 1px solid #ddd;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -67,39 +75,36 @@
       <a href="Personal.html" >Personal</a>
     </div>
     <div class="content">
-
-
-      <div class="section-title">Working Papers</div>
+      <div class="section-title">Working Papers. Please email me for drafts! </div>
       
+      <!-- Wrapper for grid layout -->
+      <div class="paper-grid">
+        <div class="paper">
+          <div class="paper-title">What Happens When We Pay Our Teachers More? Evidence from New Jersey Public Schools</div>
+          <div class="abstract">
+            The idea of increasing teacher salary to improve student performance has long been a major discussion in education policy. However, there is yet no consensus on the impact of teacher salary on improving student performance.
+          </div>
+        </div>
 
-      <div class="paper">
-        <div class="paper-title">What Happens When We Pay Our Teachers More? Evidence from New Jersey Public Schools</div>
-        <div class="abstract">
-          The idea of increasing teacher salary to improve student performance has long been a major discussion in education policy. However, there is yet no consensus on the impact of teacher salary on improving student performance.
+        <div class="paper">
+          <div class="paper-title">Bridging the Gap to Access? Impact of Pre-Collegiate Summer Program on College Outcomes</div>
+          <div class="abstract">
+            U.S. colleges have an inequity problem and even when minority students do attend college, African Americans and Hispanic/Latino students have been found to be two of the most under-performing groups. In that regard, several colleges have adopted several strategies to first increase the diversity of the students in their college and second to ensure these students end up successfully graduating from college. This paper looks at one such program carried out by the Access Center at Colorado State University called the Bridge Scholars Program - a program designed to assist students, especially those from first-generation and limited income households, in making a successful transition to college by offering an eight-week summer program the summer before they start their freshman year. Using a fuzzy regression discontinuity (FRDD) approach under a local randomization assumption, we find positive effects of the program on several college outcomes. We also discuss the mechanism through which such observed positive effects occur.
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">How Much Did COVID Impact College Outcomes for High-Schoolers Studying Remote?</div>
+          <div class="abstract">
+            Building upon the existing literature that has shown that COVID had negative impacts on high-school outcomes, we can expect COVID to have had some negative repercussions on college outcomes of affected high-school students as well. This paper answers the question by analyzing whether studying under remote settings in high school had any impacts on college outcomes. Using a standard Differences-in-Differences (DiD) model, we find no meaningful differences in the impact of studying online during high school on college outcomes as measured through college GPA and major choices.
+          </div>
         </div>
       </div>
-
-
-      <div class="paper">
-        <div class="paper-title">Bridging the Gap to Access? Impact of Pre-Collegiate Summer Program on College Outcomes</div>
-        <div class="abstract">
-          U.S. colleges have an inequity problem and even when minority students do attend college, African Americans and Hispanic/Latino students have been found to be two of the most under-performing groups. In that regard, several colleges have adopted several strategies to first increase the diversity of the students in their college and second to ensure these students end up successfully graduating from college. This paper looks at one such program carried out by the Access Center at Colorado State University called the Bridge Scholars Program - a program designed to assist students, especially those from first-generation and limited income households, in making a successful transition to college by offering an eight-week summer program the summer before they start their freshman year. Using a fuzzy regression discontinuity (FRDD) approach under a local randomization assumption, we find positive effects of the program on several college outcomes. We also discuss the mechanism through which such observed positive effects occur.
-        </div>
-      </div>
-
-
-      <div class="paper">
-        <div class="paper-title">How Much Did COVID Impact College Outcomes for High-Schoolers Studying Remote?</div>
-        <div class="abstract">
-          Building upon the existing literature that has shown that COVID had negative impacts on high-school outcomes, we can expect COVID to have had some negative repercussions on college outcomes of affected high-school students as well. This paper answers the question by analyzing whether studying under remote settings in high school had any impacts on college outcomes. Using a standard Differences-in-Differences (DiD) model, we find no meaningful differences in the impact of studying online during high school on college outcomes as measured through college GPA and major choices.
-        </div>
-      </div>
-
      
       <div class="policy-title">Policy Relevant Papers</div>
       <div class="policy-paper">
         <a href="https://api.mountainscholar.org/server/api/core/bitstreams/7934c169-fe28-4a7a-942b-a9db6ddecf04/content" target="_blank">
-          Shakya, Prasiddha, and George P. Gonpu. "Impact of remittances on economic growth in Nepal." Nepal Public Policy Review 1 (2021): 31-47.
+          Shakya, Prasiddha, and George P. Gonpu. "Impact of remittances on economic growth in Nepal." Nepal Public Policy Review  (2021): 31-47.
         </a>
       </div>
       <div class="policy-paper">
@@ -112,3 +117,4 @@
   </div>
 </body>
 </html>
+

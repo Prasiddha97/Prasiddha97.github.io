@@ -53,27 +53,32 @@
     }
 
     .image-container {
-  display: flex;
-  justify-content: center; /* Center images within the container */
-  gap: 20px; /* Add space between the images */
-  margin-top: 20px;
-}
+      display: flex;
+      justify-content: center; /* Center images within the container */
+      gap: 20px; /* Add space between the images */
+      margin-top: 20px;
+    }
 
-/* Style for individual images */
-.image-container img {
-  width: 30%; /* Set a smaller width for the images */
-  height: auto; /* Keep aspect ratio */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-/* Style for captions */
-.image-caption {
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-  color: #7f8c8d;
-}
+    .image-wrapper {
+      text-align: center; 
+      width: 30%; 
+    }
+    
+    /* Style for individual images */
+    .image-container img {
+      width: 30%; 
+      height: auto; 
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    
+    /* Style for captions */
+    .image-caption {
+      text-align: center;
+      margin-top: 10px;
+      font-style: italic;
+      color: #7f8c8d;
+    }
 
   </style>
 </head>
@@ -116,11 +121,11 @@
            <div class="image-container">
             <div>
               <img src="Images/Pic Webpage.jpg" alt="First Image">
-              <div class="caption">Caption Check 1!</div>
+              <div class="image-caption">Caption Check 1!</div>
             </div>
             <div>
               <img src="Images/Pic Webpage.jpg" alt="Second Image">
-              <div class="caption">Checking caption 2. PLease work!!!!</div>
+              <div class="image-caption">Checking caption 2. PLease work!!!!</div>
             </div>
           </div>
  

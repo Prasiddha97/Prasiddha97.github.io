@@ -53,31 +53,27 @@
     }
 
     .image-container {
-      display: flex;
-      justify-content: space-between; 
-      gap: 20px; 
-      margin-top: 20px;
-    }
-    
-    
-    .image-wrapper {
-      text-align: center; 
-      width: 48%; 
-    }
-    
-    .image-wrapper img {
-      width: 50%;
-      height: auto;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-    
-    .image-caption {
-      margin-top: 10px;
-      font-style: italic;
-      color: #7f8c8d;
-    }
+  display: flex;
+  justify-content: center; /* Center images within the container */
+  gap: 20px; /* Add space between the images */
+  margin-top: 20px;
+}
 
+/* Style for individual images */
+.image-container img {
+  width: 30%; /* Set a smaller width for the images */
+  height: auto; /* Keep aspect ratio */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Style for captions */
+.image-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: #7f8c8d;
+}
 
   </style>
 </head>
@@ -124,7 +120,7 @@
             </div>
             <div>
               <img src="Images/Pic Webpage.jpg" alt="Second Image">
-              <div class="caption">Checking caption 2!</div>
+              <div class="caption">Checking caption 2. PLease work!!!!</div>
             </div>
           </div>
  

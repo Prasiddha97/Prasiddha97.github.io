@@ -10,6 +10,7 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research - Prasiddha Shakya</title>
   <link rel="stylesheet" href="styles.css">
 
@@ -19,12 +20,14 @@
       margin: 0 auto;
       width: 100%;
     }
+
     .paper-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
       width: 100%;
     }
+
     .paper {
       width: 100%;
       box-sizing: border-box;
@@ -33,12 +36,14 @@
       background-color: #f9f9f9;
       border-radius: 8px;
     }
+
     .paper-details {
       list-style: none;
       padding: 0;
       margin: 0;
       margin-top: 10px;
     }
+
     .paper-summary {
       font-size: 0.95em;
       font-weight: 600;
@@ -49,22 +54,23 @@
       background-color: #ecf0f1;
       margin-bottom: 5px;
       user-select: none;
+      list-style: none;
+      text-align: center;
     }
+
     .paper-summary::marker {
-      content: none;
+      content: "";
+      display: none;
     }
-    .paper-summary::before {
-      content: "▶";
-      display: inline-block;
-      margin-right: 8px;
-      transition: transform 0.2s ease;
+
+    .paper-summary::-webkit-details-marker {
+      display: none;
     }
-    .paper-details[open] > .paper-summary::before {
-      transform: rotate(90deg);
-    }
+
     .paper-summary:hover {
       background-color: #d0d3d4;
     }
+
     .section-title {
       font-size: 2em;
       font-weight: bold;
@@ -74,6 +80,7 @@
       grid-column: 1 / -1;
       text-align: center;
     }
+
     .paper-title {
       font-size: 1em;
       font-weight: bold;
@@ -82,27 +89,52 @@
       margin-bottom: 10px;
       text-align: center;
     }
+
     .abstract {
       text-align: justify;
       color: #7f8c8d;
       margin-bottom: 20px;
     }
+
     .content {
       padding: 20px;
     }
 
-   
     .abstract.centered {
       text-align: center;
       margin-bottom: 0;
     }
+
     .wip-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .wip-list li {
       margin: 10px 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      .content {
+        padding: 12px;
+      }
+
+      .paper {
+        padding: 12px;
+      }
+
+      .section-title {
+        font-size: 1.6em;
+      }
+
+      .paper-summary {
+        padding: 10px 12px;
+      }
+
+      .abstract {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -121,54 +153,64 @@
 
           <div class="section-title">Published Papers</div>
 
-           <div class="paper">
+          <div class="paper">
             <div class="paper-title">
               Bridging the Gap to Access? Impact of Pre-Collegiate Summer Program on College Outcomes (Forthcoming in Education Finance and Policy)
             </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 <div style="text-align: center;">
                   <em>
                     <a href="https://www.dropbox.com/scl/fi/gp20gavphgc7v14xdzm4a/Sid_Bridge.pdf?rlkey=tjzyo893rsz1j5cgfmdn5w1ql&st=414wz1um&raw=1" target="_blank">
                       Link to ungated version
                     </a>
-                  </em><br>
+                  </em>
+                  <br>
                 </div>
+
                 U.S. colleges face persistent inequities—not only in who enrolls, but in who ultimately graduates. While institutions have expanded efforts to diversify incoming classes, students from historically underserved backgrounds, including those who are first-generation and low-income, continue to face several barriers which affect their rate of degree completion. This paper evaluates the causal impact of the a bridge program called BSP, an eight-week pre-collegiate summer initiative at a large public land grant university designed to support such students in their transition to college. Leveraging a fuzzy regression discontinuity design (FRDD) within a local randomization inference framework, I find that BSP substantially improves first-year completion and second-year persistence. While participants receive a $2,500 annual scholarship, comparative analyses of similar financial aid programs suggest that the bundled nature of BSP—including structured summer programming, academic mentoring, and peer support—is central to its effectiveness. These findings underscore the importance of holistic interventions that address both financial and non-financial barriers to student success.
               </div>
             </details>
           </div>
 
-              <div class="paper">
+          <div class="paper">
             <div class="paper-title">
               What Happens When We Pay Our Teachers More? Evidence from New Jersey Public Schools (in Economics of Education Review)
             </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 <div style="text-align: center;">
                   <em>
-                     <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272775725001359" target="_blank">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272775725001359" target="_blank">
                       Link
                     </a>
                     <br>
                     <a href="https://www.dropbox.com/scl/fi/ig2s6au4h0n8doy4t4npq/Sid_JMP.pdf?rlkey=cw1o78vfyznb9ju772pavemuq&st=ogbc4pch&raw=1" target="_blank">
                       Link to ungated version
                     </a>
-                  </em><br>
+                  </em>
+                  <br>
                 </div>
+
                 This paper examines the impact of increasing teacher salaries on student outcomes by exploiting variation from the “50K The First Day” campaign that established a $50,000 salary floor for new teachers across New Jersey school districts. Using school-level data from 2003 to 2019, I employ a staggered difference-in-differences design with variation in both timing and magnitude and first show that the campaign shifted the entire salary schedule, raising pay for incumbents as well as new teachers (approximately $1,500 on average). I then estimate effects on standardized achievement, graduation, and near-term college enrollment. Achievement gains emerge gradually: by five years after adoption, high school Math and ELA increase by about 0.15–0.20 and 0.12–0.17 standard deviations, respectively; in Grade 4, average effects are 0.03–0.05 (Math) and 0.01–0.03 (ELA), while Grade 8 estimates are small and imprecise. Despite higher salaries across the experience distribution, per-pupil spending—both total and teacher-specific—does not increase. Instead, districts appear to finance the schedule change through modest staffing reductions. Analyzing the mechanisms through which these positive effects could have been observed, I rule out teacher migration as a key driver suggesting that the observed improvements are more likely due to changes in teacher motivation and the quality of new teachers entering the profession.
               </div>
             </details>
           </div>
 
-            <div class="paper">
+          <div class="paper">
             <div class="paper-title">
-              A double-shot of organizing: how Starbucks workers have inspired the labour movement. (with Zach Schaller & Sal McCollum) (in Applied Economics Letters)
+              A double-shot of organizing: how Starbucks workers have inspired the labour movement. (with Zach Schaller &amp; Sal McCollum) (in Applied Economics Letters)
             </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 <div style="text-align: center;">
                   <em>
@@ -179,35 +221,42 @@
                     <a href="https://www.dropbox.com/scl/fi/xlwy6li0snz17lemgo7yk/The_Siren_of_the_Labor_Movement_AEL_Sept2025.pdf?rlkey=6idb1jwlupi3nlb1jsz8eeeya&st=3iny56y2&raw=1" target="_blank">
                       Link to ungated version
                     </a>
-                  </em><br>
+                  </em>
+                  <br>
                 </div>
+
                 Since the first Starbucks store unionized in Buffalo in 2021, over 700 locations have filed for elections, and broader organizing has surged. We examine whether this campaign sparked wider labor activism. Using an event study, we find that counties with a Starbucks election saw nearly six additional non-Starbucks elections on average—accounting for 21% of the post-2021 surge. However, a staggered difference-in-differences design reveals no wage gains for restaurant workers, suggesting that union momentum has not yet shifted bargaining power. Employers may be waiting on the outcome of first contract negotiations before adjusting pay structures.
               </div>
             </details>
           </div>
 
-
           <div class="paper">
             <div class="paper-title">
               The Pandemic Learning Shock That Wasn’t: STEM Major Choice Resilience During COVID-19 (in Education Economics)
             </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 <div style="text-align: center;">
                   <em>
-                      <a href="https://www.tandfonline.com/doi/full/10.1080/09645292.2025.2595166?needAccess=true" target="_blank">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/09645292.2025.2595166?needAccess=true" target="_blank">
                       Link
                     </a>
                     <br>
                     <a href="https://www.dropbox.com/scl/fi/42ptt0oy84hak2iabcq4u/Bio_and_STEM_switch.pdf?rlkey=poqfbrm41oazqdclk93td80ac&st=h2bawr8g&raw=1" target="_blank">
                       Link to ungated version
                     </a>
-                  </em><br>
+                  </em>
+                  <br>
                 </div>
+
                 This study investigates whether the onset of the COVID-19 pandemic—and the associated shift in campus operations, including widespread remote instruction—affected undergraduate students’ decisions to remain in or switch into STEM (and biology-related) majors. Using longitudinal administrative data from a large U.S. public university (cohorts 2013–2019) and a staggered difference-in-differences design, I find no meaningful effects of the pandemic’s onset on semester-level registration in STEM majors or on switching into STEM. Robustness checks, including nearest-neighbor matching, yield similar null estimates. Overall, the evidence suggests that students’ field-of-study choices were largely resilient to the instructional format change, at least in the short run.
               </div>
+
               <br>
+
               <em>
                 <a href="https://www.tandfonline.com/doi/full/10.1080/09645292.2025.2595166" target="_blank">
                   Shakya, P. (2025). The pandemic learning shock that wasn’t: STEM major choice resilience during COVID-19. Education Economics, 1–16.
@@ -216,22 +265,21 @@
             </details>
           </div>
 
-      
-
-         
-
-
-          
-
           <div class="section-title">Policy Relevant Work</div>
 
           <div class="paper">
-            <div class="paper-title">Impact of remittances on economic growth in Nepal (in Nepal Public Policy Review) </div>
+            <div class="paper-title">
+              Impact of remittances on economic growth in Nepal (in Nepal Public Policy Review)
+            </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
-                This paper initially started out during my second year of undergraduate when I was taking econometrics and got me interested in time-series analysis. Working on this paper made me 1) think deeply about the many limitations of the study, 2) reflect on the gaps in my knowledge (and thus graduate school!), and 3) finally understand what it actually means when we say "correlation does not imply causation". My research in graduate school has drifted away from this topic but I remain interested in this area. 
+                This paper initially started out during my second year of undergraduate when I was taking econometrics and got me interested in time-series analysis. Working on this paper made me 1) think deeply about the many limitations of the study, 2) reflect on the gaps in my knowledge (and thus graduate school!), and 3) finally understand what it actually means when we say "correlation does not imply causation". My research in graduate school has drifted away from this topic but I remain interested in this area.
+
                 <br>
+
                 <em>
                   <a href="https://www.nppr.org.np/index.php/journal/article/view/9" target="_blank">
                     Shakya, Prasiddha, and George P. Gonpu. "Impact of remittances on economic growth in Nepal." Nepal Public Policy Review (2021): 31-47.
@@ -242,48 +290,111 @@
           </div>
 
           <div class="paper">
-            <div class="paper-title">Agricultural conservation networks in Iowa and Understanding Landscape of Farm to School programs</div>
+            <div class="paper-title">
+              Agricultural conservation networks in Iowa and Understanding Landscape of Farm to School programs
+            </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 This is an example of two projects I was part of for my work at IRISS. In the first one below, we use social network analysis (SNA) to figure out how connections amongst farmers explain their working pattern. The project was funded by the Environmental Defense Fund. A lot of the social network stuff did not end up in this report but I really enjoy working on these type of analysis and hope to incorporate network analysis in my future works. I have had no formal training on SNA's but I think I have picked up a lot of cool things working on different SNA projects at IRISS. I remain interested to see how, and if, SNA's will gain traction in economics research.
-                <a href="https://business.edf.org/insights/how-food-companies-can-harness-the-power-of-social-networks-for-scope-3-emissions-reductions" target="_blank">Link to EDF report.</a>
+
+                <a href="https://business.edf.org/insights/how-food-companies-can-harness-the-power-of-social-networks-for-scope-3-emissions-reductions" target="_blank">
+                  Link to EDF report.
+                </a>
+
                 <br><br>
+
                 The second paper was carried out in collaboration with National Farm to School Network (NFSN). NFSN contracted the Institute for Research in the Social Sciences at Colorado State University to collaborate on developing a study aimed at (1) understanding the current landscape of farm to school coordination around the country and (2) assessing the impact that farm to school coordinators or designated farm to school staff have on farm to school activities at the School Food Authority (SFA) level.
+
                 <br><br>
+
                 This report is the result of a mixed-methods research project that included individual interviews with farm to school practitioners, a survey of individuals responsible for farm to school coordination across the U.S., and participant observation in Community of Practice and Working Group meetings with farm to school practitioners.
+
                 <em>
-                  <a href="https://www.dropbox.com/scl/fi/xseesqk3724qq6mraduj8/NFSN-Report_Landscape-of-FTS-Coordination_May-2025.pdf?rlkey=t1t10pr8b9royuhgjwvldjjds&st=xth0puqh&raw=1" target="_blank">Report</a>
+                  <a href="https://www.dropbox.com/scl/fi/xseesqk3724qq6mraduj8/NFSN-Report_Landscape-of-FTS-Coordination_May-2025.pdf?rlkey=t1t10pr8b9royuhgjwvldjjds&st=xth0puqh&raw=1" target="_blank">
+                    Report
+                  </a>
                 </em>
               </div>
             </details>
           </div>
 
           <div class="paper">
-            <div class="paper-title">Economic Impact of Ute Theatre in Garfield County, Colorado</div>
+            <div class="paper-title">
+              Economic Impact of Ute Theatre in Garfield County, Colorado
+            </div>
+
             <details class="paper-details">
-              <summary class="paper-summary">Show Abstract</summary>
+              <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
                 This was a project I did as part of CSU Extension. CSU Extension fulfills the university’s land-grant mission of making the university’s educational offerings and resources accessible to all by connecting Coloradans to actionable, research-based solutions, programming, services, and expertise. This project involved developing an input-output model using data from IMPLAN to look at the economic impact of the Ute Theatre. The model was developed from scratch. I also administered a survey from start to finish to understand the socio-cultural importance of this historical venue to people of Rifle. In designing the survey flyer and in-person questionnaires, I finally made use of the many hours of my time I spent in high school learning how to use Photoshop. Ex-post, I was humbled to find many free websites online could have probably designed the flyers better.
+
                 <br>
+
                 <em>
-                  <a href="https://csuredi.org/wp-content/uploads/2025/01/Ute_REDI.pdf" target="_blank">Report</a>
-                  <a href="https://www.postindependent.com/news/rifle-city-council-meeting-decisions-and-information-from-the-ute-theater-on-sept-18/" target="_blank">Media Coverage</a>
+                  <a href="https://csuredi.org/wp-content/uploads/2025/01/Ute_REDI.pdf" target="_blank">
+                    Report
+                  </a>
+                  <br>
+                  <a href="https://www.postindependent.com/news/rifle-city-council-meeting-decisions-and-information-from-the-ute-theater-on-sept-18/" target="_blank">
+                    Media Coverage
+                  </a>
                 </em>
               </div>
             </details>
           </div>
 
           <div class="section-title">Works in Progress</div>
-                
-                <li>Further Evidence of the Effects of Air Pollution on Crime (with Sayorn Chin) (Draft available upon request) </li>
-                <li>Do Quicker Admission Decisions by Colleges Improve College Yields? (with Renee Barger and Mark Umbricht) (Under Review)</li> 
-                <li>More the Merrier? Out-of-State Enrollment and In-State Student Outcomes</li>
-                <li>Peers, Professors, and Paychecks: How Classroom Diversity Shapes Business/Economics Majors and Jobs</li>
-                <li>The Siren of the Labor Movement: Spillover Effects from Starbucks Organizing (with Zach Schaller, Sal McCollum, and Monica Opoku)</li>
-             
+
+          <div class="paper">
+            <div class="paper-title">
+              Further Evidence of the Effects of Air Pollution on Crime
+              (with Sayorn Chin)
+              (Under Review)
             </div>
+
+            <details class="paper-details">
+              <summary class="paper-summary">Abstract</summary>
+
+              <div class="abstract">
+                <div style="text-align: center;">
+                  <em>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6906621" target="_blank">
+                      SSRN Working Paper
+                    </a>
+                  </em>
+                  <br><br>
+                </div>
+
+                This paper examines the relationship between ambient particulate pollution and crime in the United Kingdom using monthly police-recorded crime data matched to particulate pollution, weather, and local socioeconomic controls. The empirical analysis focuses on local authority districts with a pollution monitor within 20 kilometers and estimates fixed-effects models that absorb police-agency-by-month-year shocks. These fixed effects account for contemporaneous enforcement, reporting, and seasonal conditions common to LADs within the same police-agency area in the same calendar month. We find that economically motivated offenses increase more consistently with pollution exposure than violent crime. Threshold specifications show that an additional day with AQI at or above 100 is associated with a 1.5 percent increase in property crime, while the corresponding violent-crime estimate is small and statistically insignificant. Estimates using the higher AQI threshold are less precise because high-threshold pollution days are comparatively sparse. The offense pattern is more consistent with cognitive-load and perceived-deterrence channels than with a pure aggression mechanism, though the estimates should be interpreted as conditional associations rather than definitive causal effects.
+              </div>
+            </details>
           </div>
+
+          <div class="paper">
+            <div class="paper-title">
+              Do Quicker Admission Decisions by Colleges Improve College Yields?
+              (with Renee Barger and Mark Umbricht)
+              (Revise &amp; Resubmit)
+            </div>
+
+            <details class="paper-details">
+              <summary class="paper-summary">Abstract</summary>
+
+              <div class="abstract">
+                This paper examines whether the time institutions take to issue admissions decisions is associated with students' enrollment behavior. Using administrative data on all applicants to 13 public universities in North Carolina, linked to National Student Clearinghouse enrollment records, we study variation in the number of days between application completion and admission notification. Across a wide range of specifications, admissions decision timing exhibits little association with enrollment at the admitting institution or with where students enroll when they decline an offer. Even at the upper bounds of confidence intervals, faster decisions are associated with economically small changes in enrollment probabilities. Moreover, decision timing does not predict shifts across public, private, or out-of-state enrollment destinations, indicating that quicker admissions decisions are unlikely to alter system-wide enrollment patterns in public higher education.
+              </div>
+            </details>
+          </div>
+
+          <ul class="wip-list">
+            <li>More the Merrier? Out-of-State Enrollment and In-State Student Outcomes</li>
+            <li>Peers, Professors, and Paychecks: How Classroom Diversity Shapes Business/Economics Majors and Jobs</li>
+            <li>The Siren of the Labor Movement: Spillover Effects from Starbucks Organizing (with Zach Schaller, Sal McCollum, and Monica Opoku)</li>
+          </ul>
 
         </div> <!-- /paper-grid -->
       </div> <!-- /paper-container-wrapper -->

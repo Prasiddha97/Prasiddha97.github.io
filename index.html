@@ -3,38 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prasiddha Shakya.">
+  <meta
+    name="description"
+    content="Prasiddha Shakya, applied microeconomist specializing in education and labor economics."
+  >
+
   <title>Prasiddha Shakya</title>
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /*
+     * These rules can remain here or be moved into styles.css.
+     * Because they appear after the external stylesheet, they will override
+     * conflicting rules already contained in styles.css.
+     */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: #2c3e50;
+      background-color: #ffffff;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 28px 50px;
+    }
+
+    /*
+     * Navigation
+     */
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px 28px;
+      padding: 25px 0;
+    }
+
+    .header a {
+      color: #2c3e50;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .header a:hover,
+    .header a:focus {
+      color: #7d4623;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /*
+     * Main desktop layout
+     */
+
+    .content {
+      display: flex;
+      align-items: flex-start;
+      gap: 42px;
+      width: 100%;
+      padding-top: 25px;
+    }
+
+    #profile-pic {
+      display: block;
+      flex: 0 0 auto;
+      width: clamp(220px, 27vw, 290px);
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .intro {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 720px;
+    }
+
+    .intro h1 {
+      margin: 0 0 22px;
+      line-height: 1.2;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .intro p {
+      margin: 0 0 1.25em;
+      overflow-wrap: break-word;
+    }
+
+    .intro a {
+      color: #7d4623;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .email-text {
+      white-space: normal;
+      font-weight: 600;
+    }
+
+    /*
+     * Tablet and mobile layout
+     */
+
+    @media screen and (max-width: 760px) {
+      .container {
+        padding: 0 20px 40px;
+      }
+
+      .header {
+        gap: 10px 22px;
+        padding: 20px 0;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding-top: 10px;
+      }
+
+      #profile-pic {
+        width: min(72vw, 270px);
+        margin: 0 auto;
+      }
+
+      .intro {
+        width: 100%;
+        max-width: 680px;
+      }
+
+      .intro h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: clamp(1.85rem, 8vw, 2.5rem);
+      }
+
+      .intro p {
+        text-align: left;
+      }
+    }
+
+    /*
+     * Narrow phones
+     */
+
+    @media screen and (max-width: 420px) {
+      .container {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .header {
+        gap: 8px 18px;
+        font-size: 0.95rem;
+      }
+
+      #profile-pic {
+        width: min(78vw, 245px);
+      }
+
+      .intro h1 {
+        font-size: 1.85rem;
+      }
+
+      .intro p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="header">
-      <a href="Research.html">Research</a>
-      <a href="https://www.dropbox.com/scl/fi/v2immfv1va9o2yb4nj3iq/Sid-CV.pdf?rlkey=tn1k88xwfxddf9lf6ef12a0zk&amp;st=lddrelmf&amp;raw=1">CV</a>
-      <a href="https://scholar.google.com/citations?user=zXopdNkAAAAJ&amp;hl=en&amp;oi=sra">Google Scholar</a>
-    </div>
 
-    <div class="content">
-      <img id="profile-pic" src="Images/ECON webpage.jpg" alt="Photo of Prasiddha Shakya">
+    <nav class="header" aria-label="Primary navigation">
+      <a href="Research.html">Research</a>
+
+      <a
+        href="https://www.dropbox.com/scl/fi/v2immfv1va9o2yb4nj3iq/Sid-CV.pdf?rlkey=tn1k88xwfxddf9lf6ef12a0zk&amp;st=lddrelmf&amp;raw=1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CV
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?user=zXopdNkAAAAJ&amp;hl=en&amp;oi=sra"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+    </nav>
+
+    <main class="content">
+
+      <img
+        id="profile-pic"
+        src="Images/ECON webpage.jpg"
+        alt="Prasiddha Shakya"
+      >
 
       <div class="intro">
-        <h1><span class="highlight">Prasiddha Shakya (Sid)</span></h1>
+        <h1>
+          <span class="highlight">Prasiddha Shakya (Sid)</span>
+        </h1>
 
         <p>
-          I am an applied microeconomist and Strategic Research Fellow in the Division of Strategy and Policy at the University of North Carolina System Office. I hold a PhD in Economics from Colorado State University, where my dissertation focused on the economics of education. My research examines how education and labor-market policies shape opportunity, student success, and longer-run economic outcomes.
+          I am an applied microeconomist and Strategic Research Fellow in the
+          Division of Strategy and Policy at the University of North Carolina
+          System Office. I hold a PhD in Economics from Colorado State
+          University, where my dissertation focused on the economics of
+          education. My research examines how education and labor market
+          policies shape opportunity, student success, and longer-run economic
+          outcomes.
         </p>
 
         <p>
-          My work has appeared in <em>Education Finance and Policy</em>, <em>Economics of Education Review</em>, <em>Applied Economics Letters</em> etc. I use administrative data and quasi-experimental methods to study questions involving teacher labor markets, college access and affordability, student decision-making, and worker outcomes. More details and current drafts are available on my <a href="Research.html">Research</a> page.
+          My work has appeared in <em>Education Finance and Policy</em>,
+          <em>Economics of Education Review</em>, and
+          <em>Applied Economics Letters</em>, among other outlets. I use
+          administrative data and quasi-experimental methods to study questions
+          involving teacher labor markets, college access and affordability,
+          student decision-making, and worker outcomes. More details and
+          current drafts are available on my
+          <a href="Research.html">Research page</a>.
         </p>
 
         <p>
-          My current and future work explores the relationships among education, labor markets, and the environment. I am especially interested in how institutions and policies shape educational pathways, employment decisions, and the distribution of environmental risks. If you are interested in related research or potential collaboration, please feel free to contact me at pshakya _at_ northcarolina.edu. </a>.
+          My current and future work explores the relationships among
+          education, labor markets, and the environment. I am especially
+          interested in how institutions and policies shape educational
+          pathways, employment decisions, and the distribution of
+          environmental risks. If you are interested in related research or
+          potential collaboration, please feel free to contact me at
+          <span class="email-text">pshakya [at] northcarolina [dot] edu</span>.
         </p>
       </div>
-    </div>
+
+    </main>
   </div>
 </body>
 </html>

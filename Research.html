@@ -1,152 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYN3WNLH5S"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-GYN3WNLH5S"
+  ></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GYN3WNLH5S');
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-GYN3WNLH5S");
   </script>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Research by economist Prasiddha Shakya in the economics of education, labor economics, and public economics.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Research by economist Prasiddha Shakya in the economics of education, labor economics, and public economics."
+  >
+
   <title>Research | Prasiddha Shakya</title>
+
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: #2c3e50;
+      background-color: #ffffff;
+      line-height: 1.65;
+    }
+
+    /*
+     * Main page container
+     */
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 0 0 50px;
+      background-color: #ffffff;
+    }
+
+    /*
+     * Navigation bar
+     */
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px 32px;
+      width: 100%;
+      margin: 0;
+      padding: 17px 24px;
+      background-color: #2c3e50;
+    }
+
+    .header a,
+    .header a:visited {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .header a:hover,
+    .header a:focus {
+      color: #f1d5bd;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /*
+     * Main research-page layout
+     */
+
+    .content {
+      width: 100%;
+      padding: 35px 28px 20px;
+    }
+
     .paper-container-wrapper {
+      width: 100%;
       max-width: 850px;
       margin: 0 auto;
-      width: 100%;
     }
 
     .paper-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 20px;
       width: 100%;
     }
 
-    .paper {
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid #ddd;
-      padding: 18px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-    }
-
-    .paper-details {
-      margin-top: 12px;
-    }
-
-    .paper-summary {
-      font-size: 0.95em;
-      font-weight: 600;
-      color: #2c3e50;
-      cursor: pointer;
-      padding: 8px 12px;
-      border-radius: 4px;
-      background-color: #ecf0f1;
-      user-select: none;
-      list-style: none;
-      text-align: center;
-    }
-
-    .paper-summary::marker,
-    .paper-summary::-webkit-details-marker {
-      display: none;
-      content: "";
-    }
-
-    .paper-summary:hover {
-      background-color: #d0d3d4;
-    }
+    /*
+     * Section headings
+     */
 
     .section-title {
-      font-size: 1.9em;
-      font-weight: bold;
+      margin: 42px 0 4px;
       color: #2c3e50;
-      margin-top: 42px;
-      margin-bottom: 4px;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.25;
       text-align: center;
+    }
+
+    .section-title:first-child {
+      margin-top: 5px;
     }
 
     .section-intro {
-      color: #63717d;
-      text-align: center;
-      margin: 0 auto 12px;
+      width: 100%;
       max-width: 720px;
+      margin: 0 auto 12px;
+      color: #63717d;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /*
+     * Paper cards
+     */
+
+    .paper {
+      width: 100%;
+      min-width: 0;
+      padding: 18px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
     }
 
     .paper-title {
-      font-size: 1.05em;
-      font-weight: bold;
+      margin: 0;
       color: #2c3e50;
+      font-size: 1.05rem;
+      font-weight: 700;
       line-height: 1.45;
       text-align: center;
+      overflow-wrap: anywhere;
     }
 
     .paper-status {
       display: inline-block;
+      max-width: 100%;
       margin-top: 8px;
       padding: 3px 9px;
-      border-radius: 999px;
-      background: #e8eef5;
       color: #34495e;
-      font-size: 0.82em;
+      background-color: #e8eef5;
+      border-radius: 999px;
+      font-size: 0.82rem;
       font-weight: 600;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
     }
 
-    .paper-links {
-      margin-bottom: 12px;
+    /*
+     * Expandable abstracts
+     */
+
+    .paper-details {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .paper-summary {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 9px 12px;
+      color: #2c3e50;
+      background-color: #ecf0f1;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      list-style: none;
       text-align: center;
+      user-select: none;
     }
 
-    .paper-links a {
-      display: inline-block;
-      margin: 0 6px;
+    .paper-summary::marker {
+      content: "";
+    }
+
+    .paper-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .paper-summary:hover,
+    .paper-summary:focus {
+      background-color: #d0d3d4;
     }
 
     .abstract {
+      width: 100%;
+      margin-top: 16px;
       color: #5f6c75;
-      line-height: 1.65;
+      font-size: 0.95rem;
+      line-height: 1.7;
       text-align: justify;
+      overflow-wrap: anywhere;
+      word-break: normal;
     }
 
-    .content {
-      padding: 20px;
+    /*
+     * Paper links
+     */
+
+    .paper-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px 14px;
+      width: 100%;
+      margin: 0 0 14px;
+      text-align: center;
     }
+
+    .paper-links a,
+    .abstract a {
+      color: #7d4623;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .paper-links a:hover,
+    .paper-links a:focus,
+    .abstract a:hover,
+    .abstract a:focus {
+      color: #4f2b17;
+    }
+
+    /*
+     * Works-in-progress list
+     */
 
     .wip-list {
-      list-style: none;
-      padding: 0;
+      width: 100%;
       margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
     .wip-list li {
+      width: 100%;
       margin: 12px 0;
       padding: 14px 16px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #f9f9f9;
       color: #2c3e50;
-      line-height: 1.5;
+      background-color: #f9f9f9;
+      border: 1px solid #dddddd;
+      border-left: 4px solid #2c3e50;
+      border-radius: 8px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
     }
 
-    @media screen and (max-width: 600px) {
-      .content {
-        padding: 12px;
+    /*
+     * Tablet and mobile layout
+     */
+
+    @media screen and (max-width: 760px) {
+      .header {
+        gap: 10px 24px;
+        padding: 15px 18px;
       }
 
-      .paper {
-        padding: 14px;
+      .content {
+        padding: 27px 18px 15px;
+      }
+
+      .paper-grid {
+        gap: 17px;
       }
 
       .section-title {
-        font-size: 1.55em;
+        margin-top: 34px;
+        font-size: 1.65rem;
+      }
+
+      .section-intro {
+        padding: 0 4px;
+        font-size: 0.96rem;
+      }
+
+      .paper {
+        padding: 15px;
+      }
+
+      .paper-title {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .paper-status {
+        margin-top: 7px;
+        font-size: 0.8rem;
       }
 
       .paper-summary {
@@ -154,7 +332,80 @@
       }
 
       .abstract {
+        font-size: 0.94rem;
+        line-height: 1.65;
         text-align: left;
+      }
+
+      .paper-links {
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .wip-list li {
+        padding: 13px 14px;
+      }
+    }
+
+    /*
+     * Narrow phones
+     */
+
+    @media screen and (max-width: 420px) {
+      .header {
+        gap: 8px 18px;
+        padding: 14px 12px;
+        font-size: 0.93rem;
+      }
+
+      .content {
+        padding: 23px 13px 10px;
+      }
+
+      .section-title {
+        margin-top: 30px;
+        font-size: 1.48rem;
+      }
+
+      .section-intro {
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .paper {
+        padding: 13px;
+        border-radius: 6px;
+      }
+
+      .paper-title {
+        font-size: 0.97rem;
+      }
+
+      .paper-status {
+        padding: 3px 8px;
+        border-radius: 6px;
+      }
+
+      .paper-summary {
+        padding: 10px;
+        font-size: 0.93rem;
+      }
+
+      .abstract {
+        margin-top: 14px;
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+
+      .paper-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .wip-list li {
+        padding: 12px;
+        font-size: 0.94rem;
       }
     }
   </style>
@@ -162,121 +413,298 @@
 
 <body>
   <div class="container">
-    <div class="header">
+
+    <nav class="header" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="https://www.dropbox.com/scl/fi/v2immfv1va9o2yb4nj3iq/Sid-CV.pdf?rlkey=tn1k88xwfxddf9lf6ef12a0zk&amp;st=lddrelmf&amp;raw=1">CV</a>
-      <a href="https://scholar.google.com/citations?user=zXopdNkAAAAJ&amp;hl=en&amp;oi=sra">Google Scholar</a>
-    </div>
+
+      <a
+        href="https://www.dropbox.com/scl/fi/v2immfv1va9o2yb4nj3iq/Sid-CV.pdf?rlkey=tn1k88xwfxddf9lf6ef12a0zk&amp;st=lddrelmf&amp;raw=1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CV
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?user=zXopdNkAAAAJ&amp;hl=en&amp;oi=sra"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+    </nav>
 
     <main class="content">
       <div class="paper-container-wrapper">
         <div class="paper-grid">
 
-          <div class="section-title">Published and Accepted Papers</div>
+          <div class="section-title">
+            Published and Accepted Papers
+          </div>
+
           <p class="section-intro">
             Peer-reviewed articles and papers accepted for publication.
           </p>
 
           <article class="paper">
             <div class="paper-title">
-              Do Quicker Admission Decisions by Colleges Improve College Yields?
+              Do Quicker Admission Decisions by Colleges Improve College
+              Yields?
               <br>
-              <span style="font-weight: normal;">with Renee Barger and Mark Umbricht</span>
+
+              <span style="font-weight: normal;">
+                with Renee Barger and Mark Umbricht
+              </span>
               <br>
-              <span class="paper-status">Accepted at The B.E. Journal of Economic Analysis &amp; Policy</span>
+
+              <span class="paper-status">
+                Accepted at The B.E. Journal of Economic Analysis &amp; Policy
+              </span>
             </div>
 
             <details class="paper-details">
               <summary class="paper-summary">Abstract</summary>
+
               <div class="abstract">
-                This paper examines whether the time institutions take to issue admissions decisions is associated with students' enrollment behavior. Using administrative data on all applicants to 13 public universities in North Carolina, linked to National Student Clearinghouse enrollment records, we study variation in the number of days between application completion and admission notification. Across a wide range of specifications, admissions decision timing exhibits little association with enrollment at the admitting institution or with where students enroll when they decline an offer. Even at the upper bounds of confidence intervals, faster decisions are associated with economically small changes in enrollment probabilities. Moreover, decision timing does not predict shifts across public, private, or out-of-state enrollment destinations, indicating that quicker admissions decisions are unlikely to alter system-wide enrollment patterns in public higher education.
+                This paper examines whether the time institutions take to issue
+                admissions decisions is associated with students' enrollment
+                behavior. Using administrative data on all applicants to 13
+                public universities in North Carolina, linked to National
+                Student Clearinghouse enrollment records, we study variation in
+                the number of days between application completion and admission
+                notification. Across a wide range of specifications, admissions
+                decision timing exhibits little association with enrollment at
+                the admitting institution or with where students enroll when
+                they decline an offer. Even at the upper bounds of confidence
+                intervals, faster decisions are associated with economically
+                small changes in enrollment probabilities. Moreover, decision
+                timing does not predict shifts across public, private, or
+                out-of-state enrollment destinations, indicating that quicker
+                admissions decisions are unlikely to alter system-wide
+                enrollment patterns in public higher education.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              Bridging the Gap to Access? Impact of a Pre-Collegiate Summer Program on College Outcomes
+              Bridging the Gap to Access? Impact of a Pre-Collegiate Summer
+              Program on College Outcomes
               <br>
-              <span class="paper-status">Education Finance and Policy, 2026</span>
+
+              <span class="paper-status">
+                Education Finance and Policy, 2026
+              </span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Abstract and Links</summary>
+              <summary class="paper-summary">
+                Abstract and Links
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://doi.org/10.1162/EDFP.a.440" target="_blank" rel="noopener">Published article</a>
-                  <a href="https://www.dropbox.com/scl/fi/gp20gavphgc7v14xdzm4a/Sid_Bridge.pdf?rlkey=tjzyo893rsz1j5cgfmdn5w1ql&amp;st=414wz1um&amp;raw=1" target="_blank" rel="noopener">Ungated version</a>
+                  <a
+                    href="https://doi.org/10.1162/EDFP.a.440"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Published article
+                  </a>
+
+                  <a
+                    href="https://www.dropbox.com/scl/fi/gp20gavphgc7v14xdzm4a/Sid_Bridge.pdf?rlkey=tjzyo893rsz1j5cgfmdn5w1ql&amp;st=414wz1um&amp;raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ungated version
+                  </a>
                 </div>
 
-                U.S. colleges face persistent inequities not only in who enrolls, but in who ultimately graduates. This paper evaluates the causal impact of BSP, an eight-week pre-collegiate summer initiative at a large public land-grant university designed to support first-generation and low-income students in their transition to college. Leveraging a fuzzy regression discontinuity design within a local randomization framework, I find that BSP substantially improves first-year completion and second-year persistence. While participants receive a $2,500 annual scholarship, comparative analyses of similar financial aid programs suggest that the bundled nature of BSP, including structured summer programming, academic mentoring, and peer support, is central to its effectiveness. These findings underscore the importance of holistic interventions that address both financial and nonfinancial barriers to student success.
+                U.S. colleges face persistent inequities not only in who
+                enrolls, but in who ultimately graduates. This paper evaluates
+                the causal impact of BSP, an eight-week pre-collegiate summer
+                initiative at a large public land-grant university designed to
+                support first-generation and low-income students in their
+                transition to college. Leveraging a fuzzy regression
+                discontinuity design within a local randomization framework, I
+                find that BSP substantially improves first-year completion and
+                second-year persistence. While participants receive a $2,500
+                annual scholarship, comparative analyses of similar financial
+                aid programs suggest that the bundled nature of BSP, including
+                structured summer programming, academic mentoring, and peer
+                support, is central to its effectiveness. These findings
+                underscore the importance of holistic interventions that
+                address both financial and nonfinancial barriers to student
+                success.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              What Happens When We Pay Our Teachers More? Evidence from New Jersey Public Schools
+              What Happens When We Pay Our Teachers More? Evidence from New
+              Jersey Public Schools
               <br>
-              <span class="paper-status">Economics of Education Review, 2026</span>
+
+              <span class="paper-status">
+                Economics of Education Review, 2026
+              </span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Abstract and Links</summary>
+              <summary class="paper-summary">
+                Abstract and Links
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272775725001359" target="_blank" rel="noopener">Published article</a>
-                  <a href="https://www.dropbox.com/scl/fi/ig2s6au4h0n8doy4t4npq/Sid_JMP.pdf?rlkey=cw1o78vfyznb9ju772pavemuq&amp;st=ogbc4pch&amp;raw=1" target="_blank" rel="noopener">Ungated version</a>
+                  <a
+                    href="https://www.sciencedirect.com/science/article/abs/pii/S0272775725001359"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Published article
+                  </a>
+
+                  <a
+                    href="https://www.dropbox.com/scl/fi/ig2s6au4h0n8doy4t4npq/Sid_JMP.pdf?rlkey=cw1o78vfyznb9ju772pavemuq&amp;st=ogbc4pch&amp;raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ungated version
+                  </a>
                 </div>
 
-                This paper examines the impact of increasing teacher salaries on student outcomes by exploiting variation from the “50K The First Day” campaign that established a $50,000 salary floor for new teachers across New Jersey school districts. Using school-level data from 2003 to 2019, I employ a staggered difference-in-differences design and first show that the campaign shifted the entire salary schedule, raising pay for incumbents as well as new teachers. Achievement gains emerge gradually. By five years after adoption, high school Math and ELA scores increase by approximately 0.15–0.20 and 0.12–0.17 standard deviations, respectively. Despite higher salaries across the experience distribution, per-pupil spending does not increase. Districts instead appear to finance the schedule change through modest staffing reductions. I find little evidence that teacher migration is the primary mechanism, suggesting that the improvements are more likely related to teacher motivation and the quality of new teachers entering the profession.
+                This paper examines the impact of increasing teacher salaries
+                on student outcomes by exploiting variation from the “50K The
+                First Day” campaign that established a $50,000 salary floor for
+                new teachers across New Jersey school districts. Using
+                school-level data from 2003 to 2019, I employ a staggered
+                difference-in-differences design and first show that the
+                campaign shifted the entire salary schedule, raising pay for
+                incumbents as well as new teachers. Achievement gains emerge
+                gradually. By five years after adoption, high school Math and
+                ELA scores increase by approximately 0.15–0.20 and 0.12–0.17
+                standard deviations, respectively. Despite higher salaries
+                across the experience distribution, per-pupil spending does
+                not increase. Districts instead appear to finance the schedule
+                change through modest staffing reductions. I find little
+                evidence that teacher migration is the primary mechanism,
+                suggesting that the improvements are more likely related to
+                teacher motivation and the quality of new teachers entering
+                the profession.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              A Double-Shot of Organizing: How Starbucks Workers Have Inspired the Labour Movement
+              A Double-Shot of Organizing: How Starbucks Workers Have Inspired
+              the Labour Movement
               <br>
-              <span style="font-weight: normal;">with Zach Schaller and Sal McCollum</span>
+
+              <span style="font-weight: normal;">
+                with Zach Schaller and Sal McCollum
+              </span>
               <br>
-              <span class="paper-status">Applied Economics Letters, 2026</span>
+
+              <span class="paper-status">
+                Applied Economics Letters, 2026
+              </span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Abstract and Links</summary>
+              <summary class="paper-summary">
+                Abstract and Links
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2026.2636229" target="_blank" rel="noopener">Published article</a>
-                  <a href="https://www.dropbox.com/scl/fi/xlwy6li0snz17lemgo7yk/The_Siren_of_the_Labor_Movement_AEL_Sept2025.pdf?rlkey=6idb1jwlupi3nlb1jsz8eeeya&amp;st=3iny56y2&amp;raw=1" target="_blank" rel="noopener">Ungated version</a>
+                  <a
+                    href="https://www.tandfonline.com/doi/full/10.1080/13504851.2026.2636229"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Published article
+                  </a>
+
+                  <a
+                    href="https://www.dropbox.com/scl/fi/xlwy6li0snz17lemgo7yk/The_Siren_of_the_Labor_Movement_AEL_Sept2025.pdf?rlkey=6idb1jwlupi3nlb1jsz8eeeya&amp;st=3iny56y2&amp;raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ungated version
+                  </a>
                 </div>
 
-                Since the first Starbucks store unionized in Buffalo in 2021, over 700 locations have filed for elections, and broader organizing has surged. We examine whether this campaign sparked wider labor activism. Using an event study, we find that counties with a Starbucks election saw nearly six additional non-Starbucks elections on average, accounting for 21 percent of the post-2021 surge. However, a staggered difference-in-differences design reveals no wage gains for restaurant workers, suggesting that union momentum has not yet shifted bargaining power.
+                Since the first Starbucks store unionized in Buffalo in 2021,
+                over 700 locations have filed for elections, and broader
+                organizing has surged. We examine whether this campaign sparked
+                wider labor activism. Using an event study, we find that
+                counties with a Starbucks election saw nearly six additional
+                non-Starbucks elections on average, accounting for 21 percent
+                of the post-2021 surge. However, a staggered
+                difference-in-differences design reveals no wage gains for
+                restaurant workers, suggesting that union momentum has not yet
+                shifted bargaining power.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              The Pandemic Learning Shock That Wasn't: STEM Major Choice Resilience During COVID-19
+              The Pandemic Learning Shock That Wasn't: STEM Major Choice
+              Resilience During COVID-19
               <br>
-              <span class="paper-status">Education Economics, 2025</span>
+
+              <span class="paper-status">
+                Education Economics, 2025
+              </span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Abstract and Links</summary>
+              <summary class="paper-summary">
+                Abstract and Links
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://www.tandfonline.com/doi/full/10.1080/09645292.2025.2595166" target="_blank" rel="noopener">Published article</a>
-                  <a href="https://www.dropbox.com/scl/fi/42ptt0oy84hak2iabcq4u/Bio_and_STEM_switch.pdf?rlkey=poqfbrm41oazqdclk93td80ac&amp;st=h2bawr8g&amp;raw=1" target="_blank" rel="noopener">Ungated version</a>
+                  <a
+                    href="https://www.tandfonline.com/doi/full/10.1080/09645292.2025.2595166"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Published article
+                  </a>
+
+                  <a
+                    href="https://www.dropbox.com/scl/fi/42ptt0oy84hak2iabcq4u/Bio_and_STEM_switch.pdf?rlkey=poqfbrm41oazqdclk93td80ac&amp;st=h2bawr8g&amp;raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ungated version
+                  </a>
                 </div>
 
-                This study investigates whether the onset of the COVID-19 pandemic and the associated shift in campus operations affected undergraduate students' decisions to remain in or switch into STEM and biology-related majors. Using longitudinal administrative data from a large U.S. public university and a staggered difference-in-differences design, I find no meaningful effects of the pandemic's onset on semester-level registration in STEM majors or on switching into STEM. Robustness checks, including nearest-neighbor matching, yield similar null estimates. Overall, the evidence suggests that students' field-of-study choices were largely resilient to the instructional format change, at least in the short run.
+                This study investigates whether the onset of the COVID-19
+                pandemic and the associated shift in campus operations affected
+                undergraduate students' decisions to remain in or switch into
+                STEM and biology-related majors. Using longitudinal
+                administrative data from a large U.S. public university and a
+                staggered difference-in-differences design, I find no meaningful
+                effects of the pandemic's onset on semester-level registration
+                in STEM majors or on switching into STEM. Robustness checks,
+                including nearest-neighbor matching, yield similar null
+                estimates. Overall, the evidence suggests that students'
+                field-of-study choices were largely resilient to the
+                instructional format change, at least in the short run.
               </div>
             </details>
           </article>
 
           <div class="section-title">Working Papers</div>
+
           <p class="section-intro">
             Current manuscripts and ongoing research projects.
           </p>
@@ -285,19 +713,47 @@
             <div class="paper-title">
               Further Evidence of the Effects of Air Pollution on Crime
               <br>
-              <span style="font-weight: normal;">with Sayorn Chin and Salvador Lurbe</span>
+
+              <span style="font-weight: normal;">
+                with Sayorn Chin and Salvador Lurbe
+              </span>
               <br>
+
               <span class="paper-status">Under Review</span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Abstract and Link</summary>
+              <summary class="paper-summary">
+                Abstract and Link
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6906621" target="_blank" rel="noopener">SSRN working paper</a>
+                  <a
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6906621"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SSRN working paper
+                  </a>
                 </div>
 
-                This paper examines the relationship between ambient particulate pollution and crime in the United Kingdom using monthly police-recorded crime data matched to pollution, weather, and local socioeconomic controls. The empirical analysis focuses on local authority districts with a pollution monitor within 20 kilometers and estimates fixed-effects models that absorb police-agency-by-month-year shocks. We find that economically motivated offenses increase more consistently with pollution exposure than violent crime. Threshold specifications show that an additional day with AQI at or above 100 is associated with a 1.5 percent increase in property crime, while the corresponding violent-crime estimate is small and statistically insignificant. The offense pattern is more consistent with cognitive-load and perceived-deterrence channels than with a pure aggression mechanism, though the estimates should be interpreted as conditional associations rather than definitive causal effects.
+                This paper examines the relationship between ambient particulate
+                pollution and crime in the United Kingdom using monthly
+                police-recorded crime data matched to pollution, weather, and
+                local socioeconomic controls. The empirical analysis focuses
+                on local authority districts with a pollution monitor within
+                20 kilometers and estimates fixed-effects models that absorb
+                police-agency-by-month-year shocks. We find that economically
+                motivated offenses increase more consistently with pollution
+                exposure than violent crime. Threshold specifications show that
+                an additional day with AQI at or above 100 is associated with a
+                1.5 percent increase in property crime, while the corresponding
+                violent-crime estimate is small and statistically insignificant.
+                The offense pattern is more consistent with cognitive-load and
+                perceived-deterrence channels than with a pure aggression
+                mechanism, though the estimates should be interpreted as
+                conditional associations rather than definitive causal effects.
               </div>
             </details>
           </article>
@@ -306,83 +762,205 @@
             <div class="paper-title">
               Excess Emissions and Infant Health: Evidence from Texas
               <br>
-              <span style="font-weight: normal;">with Susan Averett and Sayorn Chin</span>
+
+              <span style="font-weight: normal;">
+                with Susan Averett and Sayorn Chin
+              </span>
               <br>
+
               <span class="paper-status">Working Paper</span>
             </div>
 
             <details class="paper-details">
               <summary class="paper-summary">Abstract</summary>
-              <div class="abstract">
-                <div class="paper-links"><em>Draft available upon request</em></div>
 
-                States have long granted industrial facilities exemptions from Clean Air Act penalties for “excess emissions,” the unanticipated pollution releases from start-ups, shutdowns, and malfunctions. Linking more than two million confidential Texas birth records from 2003 to 2010 to the state's facility-level excess-emissions registry, we use within-tract variation in wind direction on event days to identify the causal effect of acute pollution shocks on infant health. Excess emissions sharply increase local ambient ozone. One hundred additional tons of NOx within 15 miles of a monitor raises daily mean ozone by about 56 ppb. Mothers whose tracts lie downwind on a larger share of pregnancy-window event days deliver infants with lower birth weight and a higher probability of preterm birth. Short-duration emission spikes, though often treated as exceptional, have measurable consequences for early-life health.
+              <div class="abstract">
+                <div class="paper-links">
+                  <em>Draft available upon request</em>
+                </div>
+
+                States have long granted industrial facilities exemptions from
+                Clean Air Act penalties for “excess emissions,” the
+                unanticipated pollution releases from start-ups, shutdowns, and
+                malfunctions. Linking more than two million confidential Texas
+                birth records from 2003 to 2010 to the state's facility-level
+                excess-emissions registry, we use within-tract variation in wind
+                direction on event days to identify the causal effect of acute
+                pollution shocks on infant health. Excess emissions sharply
+                increase local ambient ozone. One hundred additional tons of
+                NOx within 15 miles of a monitor raises daily mean ozone by
+                about 56 ppb. Mothers whose tracts lie downwind on a larger
+                share of pregnancy-window event days deliver infants with lower
+                birth weight and a higher probability of preterm birth.
+                Short-duration emission spikes, though often treated as
+                exceptional, have measurable consequences for early-life
+                health.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              The Effects of the NC Promise Tuition Reduction on Student Employment, Financing, and Degree Completion
+              The Effects of the NC Promise Tuition Reduction on Student
+              Employment, Financing, and Degree Completion
               <br>
+
               <span class="paper-status">Working Paper</span>
             </div>
 
             <details class="paper-details">
               <summary class="paper-summary">Abstract</summary>
-              <div class="abstract">
-                <div class="paper-links"><em>Draft available upon request</em></div>
 
-                A tuition reduction provides students with an immediate price benefit, but its behavioral effects depend on which part of the student budget adjusts. I study North Carolina's NC Promise Tuition Plan, which sharply reduced tuition at three regional public universities beginning in academic year 2018–19. The primary design follows 175,176 students enrolled immediately before implementation, assigns treatment according to each student's pre-policy campus, includes student fixed effects, and compares students from the same UNC entry cohort in the same academic year. I find little evidence that lower tuition meaningfully changes covered employment or students' overall work intensity while enrolled. Financing adjusts instead. The probability of borrowing falls by approximately 4.5 percentage points, while grants and work-study support also decline. The tuition benefit therefore appears to reduce future debt obligations and students' reliance on other current resources rather than substantially releasing time from paid work. Degree completion does not accelerate. Depending on how policy exposure is defined, four-year graduation falls by approximately 1.7 to 4.8 percentage points. A model of financing substitution and endogenous time to degree helps explain this joint pattern: lower tuition can reduce future repayment obligations without materially changing employment, while a recurring subsidy may also lower the private cost of remaining enrolled. Overall, NC Promise delivered substantial price and debt relief, with the primary adjustment margins occurring through financing and completion timing rather than a retreat from paid work.
+              <div class="abstract">
+                <div class="paper-links">
+                  <em>Draft available upon request</em>
+                </div>
+
+                A tuition reduction provides students with an immediate price
+                benefit, but its behavioral effects depend on which part of the
+                student budget adjusts. I study North Carolina's NC Promise
+                Tuition Plan, which sharply reduced tuition at three regional
+                public universities beginning in academic year 2018–19. The
+                primary design follows 175,176 students enrolled immediately
+                before implementation, assigns treatment according to each
+                student's pre-policy campus, includes student fixed effects,
+                and compares students from the same UNC entry cohort in the
+                same academic year. I find little evidence that lower tuition
+                meaningfully changes covered employment or students' overall
+                work intensity while enrolled. Financing adjusts instead. The
+                probability of borrowing falls by approximately 4.5 percentage
+                points, while grants and work-study support also decline. The
+                tuition benefit therefore appears to reduce future debt
+                obligations and students' reliance on other current resources
+                rather than substantially releasing time from paid work. Degree
+                completion does not accelerate. Depending on how policy
+                exposure is defined, four-year graduation falls by
+                approximately 1.7 to 4.8 percentage points. A model of financing
+                substitution and endogenous time to degree helps explain this
+                joint pattern: lower tuition can reduce future repayment
+                obligations without materially changing employment, while a
+                recurring subsidy may also lower the private cost of remaining
+                enrolled. Overall, NC Promise delivered substantial price and
+                debt relief, with the primary adjustment margins occurring
+                through financing and completion timing rather than a retreat
+                from paid work.
               </div>
             </details>
           </article>
 
           <ul class="wip-list">
-            <li><strong>More the Merrier? Out-of-State Enrollment and In-State Student Outcomes</strong></li>
-            <li><strong>Peers, Professors, and Paychecks: How Classroom Diversity Shapes Business and Economics Majors and Jobs</strong></li>
-            <li><strong>The Siren of the Labor Movement: Spillover Effects from Starbucks Organizing</strong> with Zach Schaller, Sal McCollum, and Monica Opoku</li>
+            <li>
+              <strong>
+                More the Merrier? Out-of-State Enrollment and In-State Student
+                Outcomes
+              </strong>
+            </li>
+
+            <li>
+              <strong>
+                Peers, Professors, and Paychecks: How Classroom Diversity
+                Shapes Business and Economics Majors and Jobs
+              </strong>
+            </li>
+
+            <li>
+              <strong>
+                The Siren of the Labor Movement: Spillover Effects from
+                Starbucks Organizing
+              </strong>
+              with Zach Schaller, Sal McCollum, and Monica Opoku
+            </li>
           </ul>
 
           <div class="section-title">Policy-Relevant Research</div>
+
           <p class="section-intro">
-            Selected peer-reviewed and applied research produced with government, nonprofit, and community partners.
+            Selected peer-reviewed and applied research produced with
+            government, nonprofit, and community partners.
           </p>
 
           <article class="paper">
             <div class="paper-title">
               Impact of Remittances on Economic Growth in Nepal
               <br>
-              <span style="font-weight: normal;">with George P. Gonpu</span>
+
+              <span style="font-weight: normal;">
+                with George P. Gonpu
+              </span>
               <br>
-              <span class="paper-status">Nepal Public Policy Review, 2021</span>
+
+              <span class="paper-status">
+                Nepal Public Policy Review, 2021
+              </span>
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Description and Link</summary>
+              <summary class="paper-summary">
+                Description and Link
+              </summary>
+
               <div class="abstract">
                 <div class="paper-links">
-                  <a href="https://www.nppr.org.np/index.php/journal/article/view/9" target="_blank" rel="noopener">Published article</a>
+                  <a
+                    href="https://www.nppr.org.np/index.php/journal/article/view/9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Published article
+                  </a>
                 </div>
 
-                This project began during my undergraduate econometrics coursework and introduced me to time-series analysis and applied policy research. It also shaped how I think about empirical limitations, the distinction between correlation and causation, and the value of communicating research to policy audiences.
+                This project began during my undergraduate econometrics
+                coursework and introduced me to time-series analysis and
+                applied policy research. It also shaped how I think about
+                empirical limitations, the distinction between correlation and
+                causation, and the value of communicating research to policy
+                audiences.
               </div>
             </details>
           </article>
 
           <article class="paper">
             <div class="paper-title">
-              Agricultural Conservation Networks in Iowa and the Landscape of Farm-to-School Coordination
+              Agricultural Conservation Networks in Iowa and the Landscape of
+              Farm-to-School Coordination
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Description and Links</summary>
-              <div class="abstract">
-                These interdisciplinary projects were completed through the Institute for Research in the Social Sciences. The first used social network analysis to study how relationships among farmers shape agricultural practices and was supported by the Environmental Defense Fund. The second was conducted with the National Farm to School Network and used interviews, a national survey, participant observation, and other mixed methods to examine farm-to-school coordination and the role of designated coordinators.
+              <summary class="paper-summary">
+                Description and Links
+              </summary>
 
-                <div class="paper-links" style="margin-top: 12px;">
-                  <a href="https://business.edf.org/insights/how-food-companies-can-harness-the-power-of-social-networks-for-scope-3-emissions-reductions" target="_blank" rel="noopener">EDF report</a>
-                  <a href="https://www.dropbox.com/scl/fi/xseesqk3724qq6mraduj8/NFSN-Report_Landscape-of-FTS-Coordination_May-2025.pdf?rlkey=t1t10pr8b9royuhgjwvldjjds&amp;st=xth0puqh&amp;raw=1" target="_blank" rel="noopener">Farm-to-School report</a>
+              <div class="abstract">
+                These interdisciplinary projects were completed through the
+                Institute for Research in the Social Sciences. The first used
+                social network analysis to study how relationships among
+                farmers shape agricultural practices and was supported by the
+                Environmental Defense Fund. The second was conducted with the
+                National Farm to School Network and used interviews, a national
+                survey, participant observation, and other mixed methods to
+                examine farm-to-school coordination and the role of designated
+                coordinators.
+
+                <div
+                  class="paper-links"
+                  style="margin-top: 12px;"
+                >
+                  <a
+                    href="https://business.edf.org/insights/how-food-companies-can-harness-the-power-of-social-networks-for-scope-3-emissions-reductions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    EDF report
+                  </a>
+
+                  <a
+                    href="https://www.dropbox.com/scl/fi/xseesqk3724qq6mraduj8/NFSN-Report_Landscape-of-FTS-Coordination_May-2025.pdf?rlkey=t1t10pr8b9royuhgjwvldjjds&amp;st=xth0puqh&amp;raw=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Farm-to-School report
+                  </a>
                 </div>
               </div>
             </details>
@@ -394,13 +972,40 @@
             </div>
 
             <details class="paper-details">
-              <summary class="paper-summary">Description and Links</summary>
-              <div class="abstract">
-                This CSU Extension project examined the economic and sociocultural importance of the Ute Theatre in Rifle, Colorado. I developed an input-output model using IMPLAN data and designed and administered a community survey to assess the historical venue's broader importance to residents. In designing the survey flyer and in-person questionnaires, I finally made use of the many hours I spent in high school learning how to use Photoshop. Ex post, I was humbled to discover that many free websites online could probably have designed the flyers better.
+              <summary class="paper-summary">
+                Description and Links
+              </summary>
 
-                <div class="paper-links" style="margin-top: 12px;">
-                  <a href="https://csuredi.org/wp-content/uploads/2025/01/Ute_REDI.pdf" target="_blank" rel="noopener">Report</a>
-                  <a href="https://www.postindependent.com/news/rifle-city-council-meeting-decisions-and-information-from-the-ute-theater-on-sept-18/" target="_blank" rel="noopener">Media coverage</a>
+              <div class="abstract">
+                This CSU Extension project examined the economic and
+                sociocultural importance of the Ute Theatre in Rifle, Colorado.
+                I developed an input-output model using IMPLAN data and designed
+                and administered a community survey to assess the historical
+                venue's broader importance to residents. In designing the
+                survey flyer and in-person questionnaires, I finally made use
+                of the many hours I spent in high school learning how to use
+                Photoshop. Ex post, I was humbled to discover that many free
+                websites online could probably have designed the flyers better.
+
+                <div
+                  class="paper-links"
+                  style="margin-top: 12px;"
+                >
+                  <a
+                    href="https://csuredi.org/wp-content/uploads/2025/01/Ute_REDI.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Report
+                  </a>
+
+                  <a
+                    href="https://www.postindependent.com/news/rifle-city-council-meeting-decisions-and-information-from-the-ute-theater-on-sept-18/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Media coverage
+                  </a>
                 </div>
               </div>
             </details>
@@ -409,6 +1014,8 @@
         </div>
       </div>
     </main>
+
   </div>
 </body>
+
 </html>
